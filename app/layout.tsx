@@ -4,13 +4,16 @@ import "./globals.css";
 import Provider from "@/provider/provider";
 import { Toaster } from "@/components/ui/toaster";
 import { Analytics } from "@vercel/analytics/react"
+import Navbar from "@/components/navbar";
+import { cn } from "@/lib/utils";
+import Footer from "@/components/footer";
 
 const inter = Inter({
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "SnipAI - Create LinkedIn and Twitter Posts",
+  title: "testAI - Create LinkedIn and Twitter Posts",
   description: "Generate professional LinkedIn and Twitter posts with ease. Enhance your social media presence with customized content."
 };
 
@@ -25,8 +28,12 @@ export default function RootLayout({
         className={`${inter.className}  h-screen bg-white dark:bg-black antialiased`}
       >
         <Provider>
-          {children}
-          <Toaster />
+          <div className={cn("relative flex min-h-dvh flex-col")}>
+            <Navbar />
+            <main className="flex-1 px-6">{children}</main>
+            <Footer />
+            <Toaster />
+          </div>
         </Provider>
         <Analytics />
       </body>
