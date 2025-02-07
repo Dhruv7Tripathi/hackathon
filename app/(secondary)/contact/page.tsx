@@ -18,7 +18,7 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      const response = await axios.post('/api/contact', formData);
+      const response = await axios.post('/api/contactus', formData);
 
       if (response.status === 200) {
         setSubmitStatus('success');
