@@ -4,7 +4,6 @@ import { Button } from './ui/button'
 import { ArrowRight } from 'lucide-react'
 import { AnimatePresence, motion } from "framer-motion";
 import Link from 'next/link';
-
 const words = ['Upgrade', 'Enhance', '\u00A0Improve']
 
 const HeroSection = () => {
