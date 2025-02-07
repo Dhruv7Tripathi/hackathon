@@ -4,17 +4,20 @@ import Image from 'next/image';
 import { FaTwitter, FaGithub, FaLinkedin } from 'react-icons/fa';
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-background py-20">
-      <div className="max-w-4xl mx-auto px-4 py-16">
+    <div className="min-h-screen">
+      <div className="max-w-4xl mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold mb-8 text-center">About Us</h1>
 
         <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
           <div className="relative h-[400px] rounded-lg overflow-hidden">
             <Image
-              src="/blog.avif"
+              src="/logo.png"
               alt="hackathon "
-              fill
-              className="object-cover"
+              width={500}
+              height={500}
+              priority
+              quality={95}
+              className="object-cover h-72 w-h-72"
             />
           </div>
 
